@@ -18,3 +18,4 @@ Form styles: Update input field labels to use Futura font
 Utility: Add CSS variables for Ficus green and Franklin Gothic font stacks
 Refactor: Clean up unused CSS classes after font and emoji removal
 Dashboard: Resize data visualization labels for better fit
+Modal UI: Update header fonts to Futura and body to Franklin Gothic
