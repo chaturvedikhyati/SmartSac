@@ -1,1 +1,2 @@
 Initial commit: Set up project structure for SmartSac frontend
+Style update: Replace all emojis with text-based labels for a professional look
