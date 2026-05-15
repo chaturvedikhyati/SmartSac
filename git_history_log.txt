@@ -10,3 +10,4 @@ Typography: Fine-tune letter spacing for Franklin Gothic text elements
 Footer change: Update background color and reduce font size of links
 Component update: Remove emoji icons from the dashboard summary cards
 Style tweak: Increase contrast of text on Ficus green backgrounds
+Global styles: Define Futura as the default sans-serif fallback font
