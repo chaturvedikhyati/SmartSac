@@ -7,3 +7,4 @@ UI refinement: Reduce font sizes globally for a more compact layout
 Header update: Adjust spacing and font weight in the navigation bar
 Button styling: Apply Ficus green background to all primary action buttons
 Typography: Fine-tune letter spacing for Franklin Gothic text elements
+Footer change: Update background color and reduce font size of links
