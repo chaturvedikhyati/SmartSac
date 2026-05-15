@@ -22,3 +22,4 @@ Modal UI: Update header fonts to Futura and body to Franklin Gothic
 Typography: Reduce sub-header font sizes in the settings panel
 Iconography: Replace emoji-based status indicators with minimalist SVG icons
 Color scheme: Audit and adjust secondary colors to complement Ficus green
+Final Polish: Finalize font weight adjustments for all text components
