@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Server Guide - SmartSac Frontend</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #f9f8f6, #f0f0f0);
+    }
+    h1 { color: #3d6b4f; border-bottom: 3px solid #3d6b4f; padding-bottom: 10px; }
+    h2 { color: #3d6b4f; margin-top: 30px; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-family: 'Monaco', monospace; }
+    pre { background: #2d3748; color: #fff; padding: 15px; border-radius: 8px; overflow-x: auto; }
+    .section { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .success { color: #10b981; font-weight: bold; }
+    .warning { color: #f59e0b; font-weight: bold; }
+    button {
+      background: #3d6b4f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin: 5px;
+    }
+    button:hover { background: #2d5540; }
+  </style>
+</head>
+<body>
+  <h1>🌱 SmartSac Frontend - Quick Start</h1>
+
+  <div class="section">
+    <h2>Choose Your Server</h2>
+    <p>Pick one of the following methods to serve the frontend:</p>
+
+    <h3>Option 1: Live Server (VS Code) - Recommended for Development</h3>
+    <ol>
+      <li>Install the "Live Server" extension in VS Code</li>
+      <li>Right-click <code>index.html</code> → "Open with Live Server"</li>
+      <li>Browser will open at <code>http://localhost:5500</code></li>
+      <li>Auto-refreshes on file changes</li>
+    </ol>
+
+    <h3>Option 2: Python (Built-in)</h3>
+    <pre>cd path/to/smartsac-frontend
+python -m http.server 8000</pre>
+    <p>Visit: <code>http://localhost:8000</code></p>
+
+    <h3>Option 3: Node.js</h3>
+    <pre>npm install -g http-server
+http-server .</pre>
+    <p>Visit: <code>http://localhost:8080</code></p>
+
+    <h3>Option 4: PHP (Built-in)</h3>
+    <pre>php -S localhost:8000</pre>
+    <p>Visit: <code>http://localhost:8000</code></p>
+
+    <h3>Option 5: Node.js Express</h3>
+    <pre>npm install express
+node -e "require('express')().use(require('express').static('.')).listen(3000, () => console.log('Server at http://localhost:3000'))"</pre>
+  </div>
+
+  <div class="section">
+    <h2>Configuration</h2>
+    <p><span class="warning">Important:</span> Update the API endpoint in <code>js/core/api.js</code></p>
+    <pre>const API_CONFIG = {
+  baseURL: 'http://localhost:5000/api',  // Change this!
+  timeout: 30000,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+};</pre>
+    <p>Make sure your backend is running on the same URL!</p>
+  </div>
+
+  <div class="section">
+    <h2>Verify Setup</h2>
+    <ol>
+      <li><span class="success">✓</span> Frontend loads at your server URL</li>
+      <li><span class="success">✓</span> No console errors (F12 → Console)</li>
+      <li><span class="success">✓</span> Backend API is running</li>
+      <li><span class="success">✓</span> API baseURL is correctly configured</li>
+      <li><span class="success">✓</span> Dark mode toggle works (click moon icon)</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>Production Deployment</h2>
+    <h3>Vercel (Easiest)</h3>
+    <ol>
+      <li>Push code to GitHub</li>
+      <li>Connect GitHub to Vercel</li>
+      <li>Vercel auto-deploys on every push</li>
+      <li>Update API endpoint in backend settings</li>
+    </ol>
+
+    <h3>Traditional Server</h3>
+    <ol>
+      <li>Upload all files to web server via FTP/SFTP</li>
+      <li>Configure .htaccess or nginx for routing (if using SPA)</li>
+      <li>Update API endpoint to production backend</li>
+      <li>Enable HTTPS</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>Troubleshooting</h2>
+    <ul>
+      <li><strong>API Error 404:</strong> Check backend URL in <code>js/core/api.js</code></li>
+      <li><strong>CORS Error:</strong> Backend needs CORS headers enabled</li>
+      <li><strong>Files not loading:</strong> Clear cache (Cmd/Ctrl + Shift + R)</li>
+      <li><strong>Dark mode not working:</strong> Check theme.js is loaded</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Next Steps</h2>
+    <ol>
+      <li>Visit <code>/upload.html</code> to test the main feature</li>
+      <li>Check <code>README.md</code> for detailed documentation</li>
+      <li>Review API endpoints in <code>js/core/api.js</code></li>
+      <li>Explore the codebase structure in docs</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <p style="text-align: center; margin-top: 40px; color: #999;">
+      Built with 💚 for the planet 🌱
+    </p>
+  </div>
+</body>
+</html>

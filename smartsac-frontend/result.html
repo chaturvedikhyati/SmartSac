@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classification Result - SmartSac</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/result.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar"></nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="result-container">
+        <!-- Left Column -->
+        <div class="result-left">
+          <!-- Image -->
+          <div class="result-image">
+            <div class="result-image-empty">📦</div>
+          </div>
+
+          <!-- Item Info -->
+          <div class="result-item-info">
+            <h2 class="result-item-name">Item Name</h2>
+            
+            <!-- Confidence -->
+            <div class="result-confidence">
+              <div class="result-confidence-label">Classification Confidence</div>
+              <div class="result-confidence-value">94%</div>
+              <div class="result-confidence-bar">
+                <div class="result-confidence-fill" style="width: 94%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="result-right">
+          <!-- Category Card -->
+          <div class="result-card">
+            <!-- Category Info -->
+            <div class="result-category-section">
+              <div class="result-category-badge" style="background-color: #2d6a4f;">♻️</div>
+              <div class="result-category-info">
+                <h2>Recyclable</h2>
+                <div class="result-category-meta">
+                  <span>Disposal Instructions: <strong>Recycle Bin</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Eco Score -->
+            <div class="result-eco-score">
+              <div class="result-eco-circle">
+                <svg viewBox="0 0 120 120">
+                  <circle 
+                    cx="60" 
+                    cy="60" 
+                    r="45"
+                    fill="none"
+                    stroke="#e8f0eb"
+                    stroke-width="8"
+                  />
+                  <circle 
+                    class="circular-progress-circle" 
+                    cx="60" 
+                    cy="60" 
+                    r="45"
+                    fill="none"
+                    stroke="#10b981"
+                    stroke-width="8"
+                    stroke-dasharray="282.7"
+                    stroke-dashoffset="0"
+                    style="transition: stroke-dashoffset 0.8s ease-out;"
+                  />
+                </svg>
+                <div class="result-eco-score-text">
+                  <div class="result-eco-number">87</div>
+                  <div class="result-eco-label">Eco Score</div>
+                </div>
+              </div>
+              <div class="result-eco-meaning">
+                <div class="result-eco-meaning-title">Great Choice!</div>
+                <div class="result-eco-meaning-text">Excellent! This disposal method significantly reduces environmental impact.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Instructions Section -->
+          <div class="result-card result-instructions">
+            <h3 class="result-instructions-title">Disposal Guide</h3>
+            
+            <!-- Tabs -->
+            <div class="result-tabs"></div>
+
+            <!-- Tab Content -->
+            <div class="result-instructions-items">
+              <div class="result-tab-content active">
+                <p class="result-instructions-text">Loading instructions...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="result-actions">
+            <button id="btn-classify-another" class="result-action-btn result-action-primary">
+              <span>📸 Classify Another</span>
+            </button>
+            <button id="btn-view-history" class="result-action-btn result-action-secondary">
+              <span>📊 View History</span>
+            </button>
+            <button id="btn-share-result" class="result-action-btn result-action-tertiary">
+              <span>📤 Share Result</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/core/api.js"></script>
+  <script src="js/core/auth.js"></script>
+  <script src="js/core/router.js"></script>
+  <script src="js/core/theme.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/modal.js"></script>
+  <script src="js/components/loader.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/utils/formatters.js"></script>
+  <script src="js/utils/validators.js"></script>
+  <script src="js/pages/result.js"></script>
+</body>
+</html>

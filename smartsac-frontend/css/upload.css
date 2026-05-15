@@ -1,0 +1,317 @@
+/* ===== UPLOAD PAGE ===== */
+.upload-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl);
+}
+
+.upload-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.upload-title {
+  font-size: var(--fs-h1);
+  font-family: var(--font-serif);
+  margin-bottom: var(--spacing-md);
+}
+
+.upload-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-body);
+}
+
+/* ===== UPLOAD ZONE ===== */
+.upload-zone {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2xl);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  background-color: var(--color-bg-surface);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--spacing-lg);
+}
+
+.upload-zone.drag-over {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-light);
+  transform: scale(1.01);
+}
+
+.upload-zone:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-light);
+}
+
+.upload-zone-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--spacing-md);
+}
+
+.upload-icon {
+  font-size: 64px;
+  opacity: 0.5;
+}
+
+.upload-zone-primary {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: var(--fs-body);
+}
+
+.upload-zone-secondary {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+}
+
+/* File Preview */
+.upload-zone-preview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.upload-preview-image {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+}
+
+.upload-preview-info {
+  text-align: center;
+}
+
+.upload-preview-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.upload-preview-size {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+.upload-preview-actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.upload-remove {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-error);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.upload-remove:hover {
+  opacity: 0.9;
+}
+
+.hidden-input {
+  display: none;
+}
+
+/* ===== DIVIDER ===== */
+.upload-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xl) 0;
+  font-size: var(--fs-sm);
+}
+
+.upload-divider::before,
+.upload-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+/* ===== TEXT INPUT SECTION ===== */
+.upload-text-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.upload-text-label {
+  display: block;
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.upload-text-input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  font-size: var(--fs-body);
+  font-family: var(--font-sans);
+  transition: var(--transition-fast);
+}
+
+.upload-text-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(61, 107, 79, 0.1);
+  outline: none;
+}
+
+.upload-text-input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.upload-text-hint {
+  margin-top: var(--spacing-sm);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.upload-submit {
+  width: 100%;
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-sans);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  box-shadow: 0 2px 8px rgba(61, 107, 79, 0.15);
+}
+
+.upload-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(61, 107, 79, 0.25);
+}
+
+.upload-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.upload-submit-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* ===== ERROR STATES ===== */
+.upload-error {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-sm);
+  color: var(--color-error);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.upload-error-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.upload-error-content {
+  flex: 1;
+}
+
+.upload-error-title {
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.upload-error-message {
+  font-size: var(--fs-sm);
+}
+
+/* ===== VALIDATION MESSAGES ===== */
+.validation-message {
+  margin-top: var(--spacing-sm);
+  font-size: var(--fs-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.validation-message.error {
+  color: var(--color-error);
+}
+
+.validation-message.warning {
+  color: var(--color-warning);
+}
+
+.validation-message.success {
+  color: var(--color-success);
+}
+
+.validation-icon {
+  flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .upload-container {
+    padding: var(--spacing-lg);
+  }
+  
+  .upload-zone {
+    min-height: 200px;
+    padding: var(--spacing-lg);
+  }
+  
+  .upload-submit {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--fs-body);
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-title {
+    font-size: var(--fs-h2);
+  }
+  
+  .upload-zone {
+    min-height: 160px;
+  }
+  
+  .upload-preview-image {
+    max-height: 150px;
+  }
+}

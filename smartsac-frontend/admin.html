@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - SmartSac</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="page-with-sidebar">
+  <!-- Navbar -->
+  <nav class="navbar"></nav>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <a href="/dashboard.html" class="sidebar-logo">
+      <span class="sidebar-logo-icon">🌱</span>
+      <span>SmartSac</span>
+    </a>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+        <a href="/dashboard.html" class="sidebar-nav-link">
+          <span class="sidebar-nav-icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="/upload.html" class="sidebar-nav-link">
+          <span class="sidebar-nav-icon">📸</span>
+          <span>Upload</span>
+        </a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="/history.html" class="sidebar-nav-link">
+          <span class="sidebar-nav-icon">📋</span>
+          <span>History</span>
+        </a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="/admin.html" class="sidebar-nav-link active">
+          <span class="sidebar-nav-icon">⚙️</span>
+          <span>Admin</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-user">
+      <div class="sidebar-avatar">A</div>
+      <div class="sidebar-user-info">
+        <div class="sidebar-user-name">Admin</div>
+        <div class="sidebar-user-email">admin@example.com</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <div class="page-content">
+      <!-- Header -->
+      <div class="admin-header">
+        <h1 class="admin-title">Admin Panel</h1>
+      </div>
+
+      <!-- Tabs -->
+      <div class="admin-tabs">
+        <button class="admin-tab-btn active" data-tab="overview">Overview</button>
+        <button class="admin-tab-btn" data-tab="classifications">Classifications</button>
+        <button class="admin-tab-btn" data-tab="categories">Categories</button>
+        <button class="admin-tab-btn" data-tab="recommendations">Recommendations</button>
+      </div>
+
+      <!-- Overview Tab -->
+      <div class="admin-tab-content active" id="overview-tab">
+        <div class="overview-grid">
+          <div class="overview-card">
+            <div class="overview-label">Total Users</div>
+            <div class="overview-value">-</div>
+          </div>
+          <div class="overview-card">
+            <div class="overview-label">Total Classifications</div>
+            <div class="overview-value">-</div>
+          </div>
+          <div class="overview-card">
+            <div class="overview-label">Active Today</div>
+            <div class="overview-value">-</div>
+          </div>
+          <div class="overview-card">
+            <div class="overview-label">Avg Eco Score</div>
+            <div class="overview-value">-</div>
+          </div>
+        </div>
+
+        <div class="top-items-table">
+          <h3 class="top-items-title">Top Classified Items</h3>
+          <div class="admin-table-wrapper">
+            <table class="admin-data">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Category</th>
+                  <th>Classifications</th>
+                  <th>Avg Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4" style="text-align: center;">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Classifications Tab -->
+      <div class="admin-tab-content" id="classifications-tab">
+        <div class="admin-controls">
+          <div class="admin-search">
+            <input type="text" placeholder="Search classifications...">
+            <button class="btn btn-primary btn-sm">Search</button>
+          </div>
+        </div>
+
+        <div class="admin-table">
+          <div class="admin-table-wrapper">
+            <table class="admin-data">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>User</th>
+                  <th>Item</th>
+                  <th>Category</th>
+                  <th>Confidence</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="7" style="text-align: center;">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="admin-pagination">
+            <span class="pagination-info">Page 1 of N</span>
+            <div class="pagination-controls">
+              <button class="pagination-btn" disabled>← Prev</button>
+              <button class="pagination-btn" disabled>Next →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories Tab -->
+      <div class="admin-tab-content" id="categories-tab">
+        <div class="admin-controls">
+          <button class="btn btn-primary">+ Add Category</button>
+        </div>
+
+        <div class="admin-table">
+          <div class="admin-table-wrapper">
+            <table class="admin-data">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Color</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4" style="text-align: center;">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendations Tab -->
+      <div class="admin-tab-content" id="recommendations-tab">
+        <div class="admin-controls">
+          <button class="btn btn-primary">+ Add Recommendation</button>
+        </div>
+
+        <div class="admin-table">
+          <div class="admin-table-wrapper">
+            <table class="admin-data">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Priority</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4" style="text-align: center;">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/core/api.js"></script>
+  <script src="js/core/auth.js"></script>
+  <script src="js/core/router.js"></script>
+  <script src="js/core/theme.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/modal.js"></script>
+  <script src="js/components/loader.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/utils/formatters.js"></script>
+  <script src="js/utils/validators.js"></script>
+  <script src="js/pages/admin.js"></script>
+</body>
+</html>

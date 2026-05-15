@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload & Classify - SmartSac</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/upload.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar"></nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="upload-container">
+      <div class="upload-header">
+        <h1 class="upload-title">Classify Your Waste</h1>
+        <p class="upload-subtitle">Upload an image or enter a waste item name below to get instant classification and disposal guidance</p>
+      </div>
+
+      <!-- Upload Zone -->
+      <div class="upload-zone" id="upload-zone">
+        <div class="upload-zone-empty">
+          <div class="upload-icon">📸</div>
+          <div class="upload-zone-primary">Drop your image here</div>
+          <div class="upload-zone-secondary">or click to browse (JPEG, PNG, WebP - Max 10MB)</div>
+        </div>
+      </div>
+
+      <input type="file" id="file-input" class="hidden-input" accept="image/jpeg,image/png,image/webp">
+
+      <!-- Divider -->
+      <div class="upload-divider">or</div>
+
+      <!-- Text Input -->
+      <div class="upload-text-section">
+        <label class="upload-text-label">Enter Item Name</label>
+        <input 
+          type="text" 
+          id="item-text-input" 
+          class="upload-text-input" 
+          placeholder="e.g. plastic water bottle, banana peel, old battery..."
+          aria-label="Enter waste item name"
+        >
+        <div class="upload-text-hint">Type any item name for instant classification</div>
+      </div>
+
+      <!-- Submit Button -->
+      <button id="submit-btn" class="upload-submit">
+        <span>Classify Now</span>
+        <span>→</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/core/api.js"></script>
+  <script src="js/core/auth.js"></script>
+  <script src="js/core/router.js"></script>
+  <script src="js/core/theme.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/modal.js"></script>
+  <script src="js/components/loader.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/utils/formatters.js"></script>
+  <script src="js/utils/validators.js"></script>
+  <script src="js/pages/upload.js"></script>
+</body>
+</html>

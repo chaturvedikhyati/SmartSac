@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History - SmartSac</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/history.css">
+</head>
+<body class="page-with-sidebar">
+  <!-- Navbar -->
+  <nav class="navbar"></nav>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <a href="/dashboard.html" class="sidebar-logo">
+      <span class="sidebar-logo-icon">🌱</span>
+      <span>SmartSac</span>
+    </a>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+        <a href="/dashboard.html" class="sidebar-nav-link">
+          <span class="sidebar-nav-icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="/upload.html" class="sidebar-nav-link">
+          <span class="sidebar-nav-icon">📸</span>
+          <span>Upload</span>
+        </a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="/history.html" class="sidebar-nav-link active">
+          <span class="sidebar-nav-icon">📋</span>
+          <span>History</span>
+        </a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a href="/admin.html" class="sidebar-nav-link">
+          <span class="sidebar-nav-icon">⚙️</span>
+          <span>Admin</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-user">
+      <div class="sidebar-avatar">U</div>
+      <div class="sidebar-user-info">
+        <div class="sidebar-user-name">User</div>
+        <div class="sidebar-user-email">user@example.com</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <div class="page-content">
+      <!-- Header -->
+      <div class="history-header">
+        <h1 class="history-title">Waste Classification History</h1>
+        <div class="history-actions">
+          <a href="/upload.html" class="btn btn-primary">Classify Now</a>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="history-filters">
+        <div class="filter-group">
+          <label class="filter-label">Search Items</label>
+          <input type="text" id="search-input" class="filter-input" placeholder="Search by item name...">
+        </div>
+        
+        <div class="filter-group">
+          <label class="filter-label">Category</label>
+          <select id="category-filter" class="filter-select">
+            <option value="">All Categories</option>
+            <option value="recyclable">♻️ Recyclable</option>
+            <option value="compostable">🌿 Compostable</option>
+            <option value="hazardous">☠️ Hazardous</option>
+            <option value="reusable">🔄 Reusable</option>
+            <option value="landfill">⛰️ Landfill</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">From Date</label>
+          <input type="date" id="date-from" class="filter-input">
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">To Date</label>
+          <input type="date" id="date-to" class="filter-input">
+        </div>
+
+        <div class="filter-actions">
+          <button id="clear-filters-btn" class="filter-btn filter-clear">Clear Filters</button>
+        </div>
+      </div>
+
+      <!-- History Grid -->
+      <div class="history-grid">
+        <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
+          <div class="empty-history">
+            <div class="empty-history-icon">📭</div>
+            <div class="empty-history-title">No Classifications Yet</div>
+            <div class="empty-history-text">Start by classifying your first waste item</div>
+            <a href="/upload.html" class="btn btn-primary">Classify Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination" style="margin-top: 40px;">
+        <button id="prev-page-btn" class="pagination-btn" disabled>← Previous</button>
+        <span class="pagination-info">Page 1</span>
+        <button id="next-page-btn" class="pagination-btn" disabled>Next →</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/core/api.js"></script>
+  <script src="js/core/auth.js"></script>
+  <script src="js/core/router.js"></script>
+  <script src="js/core/theme.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/modal.js"></script>
+  <script src="js/components/loader.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/utils/formatters.js"></script>
+  <script src="js/utils/validators.js"></script>
+  <script src="js/pages/history.js"></script>
+</body>
+</html>

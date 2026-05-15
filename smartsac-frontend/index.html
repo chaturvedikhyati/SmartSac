@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartSac - Smart Waste Sorting Assistant</title>
+  <meta name="description" content="Classify waste items and get instant disposal guidance with SmartSac's AI-powered waste sorting assistant.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+  <!-- Navbar (injected by navbar.js) -->
+  <nav class="navbar">
+    <!-- Content injected dynamically -->
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="hero-title">
+          Dispose Smarter. <span class="accent">Protect the Planet.</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Upload a photo or type an item name to instantly get accurate waste classification and eco-friendly disposal instructions.
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="/upload.html" class="btn btn-primary">Start Classifying</a>
+          <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
+        </div>
+        
+        <div class="hero-trust">
+          <div class="trust-item">
+            <span class="trust-icon">✓</span>
+            <span>10k+ Items Classified</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">✓</span>
+            <span>95% Accuracy</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">✓</span>
+            <span>Free to Use</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-right">
+        <div class="hero-blob"></div>
+        <div class="hero-card animate-float">
+          <div class="hero-card-title">Recent Classification</div>
+          <div class="hero-card-item">
+            <div>
+              <div class="hero-card-name">Plastic Bottle</div>
+              <span class="hero-card-category">♻️ Recyclable</span>
+            </div>
+            <div class="hero-card-score">87</div>
+          </div>
+          <div class="hero-card-item">
+            <div>
+              <div class="hero-card-name">Banana Peel</div>
+              <span class="hero-card-category">🌿 Compostable</span>
+            </div>
+            <div class="hero-card-score">92</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">50,000+</div>
+        <div class="stat-label">Scans Processed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">12</div>
+        <div class="stat-label">Waste Categories</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">User Satisfaction</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">40+</div>
+        <div class="stat-label">Countries Served</div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container features-section" id="features">
+      <div class="features-title text-center">
+        <h2>Everything You Need to Dispose Right</h2>
+        <p>Comprehensive waste management tools at your fingertips</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon"></span>
+          <h3 class="feature-title">AI Image Recognition</h3>
+          <p class="feature-description">Upload a photo and get instant classification powered by advanced AI models</p>
+        </div>
+        
+        <div class="feature-card">
+          <span class="feature-icon"></span>
+          <h3 class="feature-title">Text-Based Search</h3>
+          <p class="feature-description">Type any item name for immediate disposal guidance and category classification</p>
+        </div>
+        
+        <div class="feature-card">
+          <span class="feature-icon"></span>
+          <h3 class="feature-title">Eco-Score Tracking</h3>
+          <p class="feature-description">Gamified sustainability scoring system to track your environmental impact</p>
+        </div>
+        
+        <div class="feature-card">
+          <span class="feature-icon"></span>
+          <h3 class="feature-title">Full Disposal Instructions</h3>
+          <p class="feature-description">Step-by-step guides for proper and eco-friendly waste disposal per category</p>
+        </div>
+        
+        <div class="feature-card">
+          <span class="feature-icon"></span>
+          <h3 class="feature-title">Waste History</h3>
+          <p class="feature-description">Track everything you've classified and monitor your sustainability journey</p>
+        </div>
+        
+        <div class="feature-card">
+          <span class="feature-icon"></span>
+          <h3 class="feature-title">Admin Analytics</h3>
+          <p class="feature-description">Full data management dashboard for administrators and waste managers</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="container" id="how-it-works">
+      <div class="text-center mb-2xl">
+        <h2>How SmartSac Works?</h2>
+      </div>
+      
+      <div class="how-it-works">
+        <div class="step">
+          <div class="step-content">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Upload or Type</h3>
+            <p class="step-description">Take a photo of your waste item or simply type its name to get started.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-content">
+            <div class="step-number">02</div>
+            <h3 class="step-title">AI Classifies</h3>
+            <p class="step-description">Our model identifies the waste category with high accuracy in seconds.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-content">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Dispose Correctly</h3>
+            <p class="step-description">Follow precise eco-friendly disposal instructions tailored to your item.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waste Categories -->
+    <section class="container">
+      <div class="text-center mb-2xl">
+        <h2 class="categories-title">What We Classify?</h2>
+      </div>
+      
+      <div class="categories-scroll">
+        <div class="category-card recyclable">
+          <div class="category-emoji">♻️</div>
+          <h3 class="category-name">Recyclable</h3>
+          <p class="category-description">Plastics, glass, metals, and paper that can be processed for reuse</p>
+        </div>
+        
+        <div class="category-card compostable">
+          <div class="category-emoji">🌿</div>
+          <h3 class="category-name">Compostable</h3>
+          <p class="category-description">Organic matter like food scraps and plant waste for composting</p>
+        </div>
+        
+        <div class="category-card hazardous">
+          <div class="category-emoji">☠️</div>
+          <h3 class="category-name">Hazardous</h3>
+          <p class="category-description">Dangerous materials requiring special handling and disposal</p>
+        </div>
+        
+        <div class="category-card reusable">
+          <div class="category-emoji">🔄</div>
+          <h3 class="category-name">Reusable</h3>
+          <p class="category-description">Items that can be repurposed or donated for second-hand use</p>
+        </div>
+        
+        <div class="category-card landfill">
+          <div class="category-emoji">⛰️</div>
+          <h3 class="category-name">Landfill</h3>
+          <p class="category-description">Non-recyclable materials suitable only for landfill disposal</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Environmental Impact Section -->
+    <section class="impact-section dark">
+      <div class="container">
+        <h2 class="impact-title">Every Scan Makes a Difference</h2>
+        
+        <div class="impact-counters">
+          <div class="impact-counter">
+            <div class="impact-number">1.2M</div>
+            <div class="impact-label">Plastic Bags Prevented</div>
+          </div>
+          <div class="impact-counter">
+            <div class="impact-number">5,000 kg</div>
+            <div class="impact-label">CO₂ Saved</div>
+          </div>
+          <div class="impact-counter">
+            <div class="impact-number">50K+</div>
+            <div class="impact-label">Items Properly Disposed</div>
+          </div>
+        </div>
+        
+        <p class="impact-description">
+          Join our community in making a real environmental impact. Every classification brings us closer to a planet where waste is managed sustainably and responsibly.
+        </p>
+        
+        <div class="impact-cta">
+          <a href="/upload.html" class="btn btn-primary">Join the Movement</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container">
+      <div class="text-center mb-2xl">
+        <h2>What Our Users Say</h2>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">SJ</div>
+          <p class="testimonial-quote">"SmartSac makes it so easy to dispose of waste correctly. I love the eco-score tracking!"</p>
+          <div class="testimonial-author">Sarah Johnson</div>
+          <div class="testimonial-role">Environmental Activist</div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">MK</div>
+          <p class="testimonial-quote">"Accurate, fast, and intuitive. This app has become essential for our office waste management."</p>
+          <div class="testimonial-author">Mike Kumar</div>
+          <div class="testimonial-role">Corporate Sustainability Manager</div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">EP</div>
+          <p class="testimonial-quote">"Finally, a tool that makes proper waste sorting accessible to everyone. Highly recommended!"</p>
+          <div class="testimonial-author">Emma Parker</div>
+          <div class="testimonial-role">Zero-Waste Advocate</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container faq" id="faq">
+      <div class="text-center mb-2xl">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How accurate is the AI classification?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              SmartSac achieves 95%+ accuracy in waste classification thanks to our advanced machine learning models trained on thousands of waste items. The confidence score helps you know how certain the AI is about each classification.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is my data private and secure?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes, we take privacy seriously. All uploaded images are processed securely and can be deleted from your history at any time. We don't sell or share your data with third parties.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I use SmartSac offline?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Currently, SmartSac requires an internet connection for AI processing. However, you can browse your history offline. We're working on offline capabilities for future versions.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What items can SmartSac classify?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              SmartSac can classify over 1,000 common waste items across 12 categories including recyclables, compostables, hazardous materials, reusable items, and landfill waste.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the eco-score work?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Your eco-score reflects the environmental impact of your waste disposal choice. Higher scores indicate more sustainable disposal methods. Track your average score over time to monitor your environmental progress.
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is SmartSac free to use?</span>
+            <span class="faq-toggle">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes! SmartSac is completely free to use for individuals. We also offer enterprise plans for organizations and municipalities interested in waste management solutions at scale.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-logo-section">
+          <div class="footer-logo">
+            <span class="footer-logo-icon">🌱</span>
+            SmartSac
+          </div>
+          <p class="footer-tagline">Making waste management smarter, one classification at a time.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="/upload.html">Get Started</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 SmartSac. All rights reserved.</div>
+        <div>Made with 🌱 for the planet</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/core/api.js"></script>
+  <script src="js/core/auth.js"></script>
+  <script src="js/core/router.js"></script>
+  <script src="js/core/theme.js"></script>
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/modal.js"></script>
+  <script src="js/components/loader.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/utils/formatters.js"></script>
+  <script src="js/utils/validators.js"></script>
+  <script src="js/pages/landing.js"></script>
+</body>
+</html>
