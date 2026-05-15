@@ -15,3 +15,4 @@ Layout adjustment: Reduce padding in the main content container
 Card UI: Update border-radius and use Franklin Gothic for card titles
 Navigation: Change hover state colors to a lighter shade of Ficus green
 Form styles: Update input field labels to use Futura font
+Utility: Add CSS variables for Ficus green and Franklin Gothic font stacks
