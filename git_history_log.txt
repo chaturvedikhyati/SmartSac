@@ -19,3 +19,4 @@ Utility: Add CSS variables for Ficus green and Franklin Gothic font stacks
 Refactor: Clean up unused CSS classes after font and emoji removal
 Dashboard: Resize data visualization labels for better fit
 Modal UI: Update header fonts to Futura and body to Franklin Gothic
+Typography: Reduce sub-header font sizes in the settings panel
