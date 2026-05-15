@@ -5,3 +5,4 @@ Font change: Set secondary font family to Futura for headings and accents
 Color update: Implement Ficus green (#3E4D3E) as the primary brand color
 UI refinement: Reduce font sizes globally for a more compact layout
 Header update: Adjust spacing and font weight in the navigation bar
+Button styling: Apply Ficus green background to all primary action buttons
