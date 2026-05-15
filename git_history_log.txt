@@ -2,3 +2,4 @@ Initial commit: Set up project structure for SmartSac frontend
 Style update: Replace all emojis with text-based labels for a professional look
 Font change: Update primary font family to Franklin Gothic across the application
 Font change: Set secondary font family to Futura for headings and accents
+Color update: Implement Ficus green (#3E4D3E) as the primary brand color
